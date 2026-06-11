@@ -1,136 +1,287 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Legal Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epomaker Bot — Legal</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #000000;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0a0a0a;
+                --text: #f0f0f0;
+                --accent: #ffffff;
+            }
+        }
 
-<style>
-/* Background Animation */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-  background: linear-gradient(-45deg, #0f172a, #111827, #0b1220, #1e293b);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
-  overflow-x: hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-/* Container */
-.container {
-  max-width: 700px;
-  margin: 100px auto;
-  padding: 20px;
-  animation: fadeIn 1.2s ease-out;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-/* Title */
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
+        @media (prefers-color-scheme: dark) {
+            nav {
+                background: rgba(10,10,10,0.95);
+                border-bottom-color: #333;
+            }
+        }
 
-p {
-  color: #94a3b8;
-  margin-bottom: 30px;
-}
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Cards */
-.card {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 18px;
-  margin: 15px 0;
-  border-radius: 14px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
 
-/* Glow effect */
-.card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(96,165,250,0.2), transparent 60%);
-  transform: rotate(0deg);
-  transition: 0.5s;
-  opacity: 0;
-}
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
 
-.card:hover::before {
-  opacity: 1;
-  transform: rotate(25deg);
-}
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-.card:hover {
-  transform: translateY(-5px) scale(1.02);
-  border-color: rgba(96,165,250,0.4);
-}
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Links */
-a {
-  color: #60a5fa;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-}
+        @media (prefers-color-scheme: dark) {
+            .hero {
+                background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+            }
+        }
 
-/* Fade animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 70%);
+            animation: pulse 15s ease infinite;
+        }
 
-/* Floating subtle particles */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 30%, rgba(96,165,250,0.08), transparent 40%),
-              radial-gradient(circle at 80% 70%, rgba(148,163,184,0.06), transparent 45%);
-  pointer-events: none;
-}
-</style>
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.35rem;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+        }
+
+        .cards {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--bg);
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            width: 320px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .card {
+                border-color: #333;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        section {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .content {
+            font-size: 1.1rem;
+        }
+
+        .content ul {
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .content li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid #eee;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.3; }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40%, 70% { transform: translateY(-15px); }
+        }
+    </style>
 </head>
-
 <body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Epomaker Bot</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
 
-<div class="container">
-  <h1>⚖️ Legal Hub</h1>
-  <p>Choose a document below</p>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Legal Center</h1>
+            <p>Transparency and trust are important to us.<br>Here you'll find our policies for Epomaker Bot.</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <h3>Privacy Policy</h3>
+                    <p>We respect your privacy and only process the minimum data necessary for the bot to function.</p>
+                    <a href="privacy.html" class="btn">Read Privacy Policy</a>
+                </div>
+                <div class="card">
+                    <h3>Terms of Service</h3>
+                    <p>By using Epomaker Bot you agree to these terms of use within our Discord server.</p>
+                    <a href="terms.html" class="btn">Read Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">↓</div>
+    </div>
 
-  <div class="card">
-    📄 <a href="TERMS_OF_SERVICE.md">Terms of Service</a>
-  </div>
-
-  <div class="card">
-    🔒 <a href="PRIVACY_POLICY.md">Privacy Policy</a>
-  </div>
-
-</div>
-
+    <footer>
+        © 2026 Epomaker Bot • Internal Discord Server Tool
+    </footer>
 </body>
 </html>
