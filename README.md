@@ -36,4 +36,4 @@ For support or questions, contact the server moderation team.
 
 [Join our Discord](https://discord.com/invite/epomaker)
 
-![Discord Server](https://discord.com/api/guilds/726610136084250764/widget.png?style=banner2)
+https://discord.com/api/guilds/726610136084250764/widget.png?style=banner2
