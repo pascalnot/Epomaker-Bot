@@ -6,13 +6,15 @@
     Built to reduce repetitive questions and help moderators focus on what matters most.
   </p>
 
-  <img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white" alt="Discord">
+  <a href="https://discord.gg/epomaker">
+    <img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white" alt="Join Discord">
+  </a>
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Status-Internal%20Use-blue" alt="Internal Use">
 
   <br><br>
   
-  ![Epomaker Banner](https://via.placeholder.com/800x200/5865F2/FFFFFF?text=EPOMAKER+BOT) <!-- Replace with your actual banner -->
+  ![Epomaker Banner](https://i.imgur.com/3dZ6ItI.png) <!-- Replace with your actual banner -->
 </div>
 
 ## ✨ About
@@ -44,8 +46,8 @@ The bot helps users get quick answers to common support questions using simple p
 
 ## 📜 Legal
 
-- **Privacy Policy**: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
-- **Terms of Service**: [TERMS_OF_SERVICE.md](TERMS_OF_SERVICE.md)
+- [Privacy Policy](https://pascalnot.github.io/Epomaker-Bot/privacy.html)
+- [Terms of Service](https://pascalnot.github.io/Epomaker-Bot/terms.html)
 
 ---
 
@@ -53,12 +55,8 @@ The bot helps users get quick answers to common support questions using simple p
 
 For support, questions, or suggestions regarding the bot, please contact the **Epomaker Discord moderation team**.
 
-## 🌐 Discord Server
-
-[Join the Epomaker Discord](https://discord.gg/epomaker) <!-- Replace with actual invite link -->
-
 ---
 
 <div align="center">
-  <sub>Made with ❤️ for the Epomaker community</sub>
+  <sub>Made with ❤️ for the Epomaker community by Pascal N.</sub>
 </div>
