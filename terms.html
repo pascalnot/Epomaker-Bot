@@ -5,53 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — Epomaker Bot</title>
     <style>
-        /* Same styles as privacy.html */
         :root {
-            --bg: #ffffff;
-            --text: #1a1a1a;
-            --accent: #000000;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0a0a0a;
-                --text: #f0f0f0;
-                --accent: #ffffff;
-            }
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
+            --text: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
-            background: rgba(255,255,255,0.95);
+            background: rgba(15,15,15,0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
             z-index: 1000;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            nav { background: rgba(10,10,10,0.95); border-bottom-color: #333; }
         }
 
         .nav-content {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; }
+        .logo { font-size: 1.7rem; font-weight: 700; }
 
         .nav-links a {
             margin-left: 2rem;
@@ -60,40 +51,53 @@
             font-weight: 500;
         }
 
-        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover { color: #aaa; }
 
-        section {
-            padding: 120px 2rem 6rem;
+        .header {
+            padding: 160px 2rem 80px;
+            text-align: center;
             max-width: 900px;
             margin: 0 auto;
         }
 
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
         }
 
         .last-updated {
-            text-align: center;
             opacity: 0.6;
-            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
-            font-size: 1.65rem;
-            margin: 3rem 0 1.25rem;
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.2rem;
             position: relative;
         }
 
         h2::after {
             content: '';
             position: absolute;
-            bottom: -6px;
+            bottom: -8px;
             left: 0;
-            width: 50px;
+            width: 60px;
             height: 3px;
-            background: var(--accent);
+            background: #ffffff;
         }
 
         .content ul {
@@ -101,14 +105,16 @@
             margin: 1.2rem 0;
         }
 
-        .content li { margin-bottom: 0.8rem; }
+        .content li {
+            margin-bottom: 0.9rem;
+        }
 
         footer {
             text-align: center;
             padding: 4rem 2rem;
-            border-top: 1px solid #eee;
-            opacity: 0.7;
+            opacity: 0.6;
             font-size: 0.95rem;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -124,42 +130,72 @@
         </div>
     </nav>
 
-    <section>
+    <div class="header">
         <h1>Terms of Service</h1>
         <p class="last-updated">Last updated: June 2026</p>
-        
-        <div class="content">
-            <h2>1. Usage</h2>
-            <p>Epomaker Bot is intended for internal use within a single Discord server.</p>
-            <p>By using the bot, you agree to these terms.</p>
+    </div>
 
-            <h2>2. Description</h2>
-            <p>The bot provides automated responses to support-related questions and basic utility commands.</p>
+    <section class="content">
+        <h2>1. Usage</h2>
+        <p>Epomaker Bot is intended for internal use within a single Discord server.</p>
+        <p>By using the bot, you agree to these terms.</p>
+    </section>
 
-            <h2>3. Acceptable Use</h2>
-            <p>Users may not:</p>
-            <ul>
-                <li>abuse or spam the bot</li>
-                <li>attempt to break or interfere with functionality</li>
-                <li>use the bot for illegal activity</li>
-            </ul>
+    <section class="content">
+        <h2>2. Description</h2>
+        <p>The bot provides automated responses to support-related questions and basic utility commands.</p>
+    </section>
 
-            <h2>4. Availability</h2>
-            <p>The bot is provided as-is. No guarantees are made regarding uptime or availability.</p>
+    <section class="content">
+        <h2>3. Acceptable Use</h2>
+        <p>Users may not:</p>
+        <ul>
+            <li>abuse or spam the bot</li>
+            <li>attempt to break or interfere with functionality</li>
+            <li>use the bot for illegal activity</li>
+        </ul>
+    </section>
 
-            <h2>5. Liability</h2>
-            <p>The bot is used at your own risk. The developers are not responsible for any issues resulting from its use.</p>
+    <section class="content">
+        <h2>4. Availability</h2>
+        <p>The bot is provided as-is. No guarantees are made regarding uptime or availability.</p>
+    </section>
 
-            <h2>6. Changes</h2>
-            <p>These terms may be updated at any time if needed.</p>
+    <section class="content">
+        <h2>5. Liability</h2>
+        <p>The bot is used at your own risk. The developers are not responsible for any issues resulting from its use.</p>
+    </section>
 
-            <h2>7. Contact</h2>
-            <p>Contact the server administrators for support or questions.</p>
-        </div>
+    <section class="content">
+        <h2>6. Changes</h2>
+        <p>These terms may be updated at any time if needed.</p>
+    </section>
+
+    <section class="content">
+        <h2>7. Contact</h2>
+        <p>Contact the server administrators for support or questions.</p>
     </section>
 
     <footer>
         © 2026 Epomaker Bot • Internal Discord Server Tool
     </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 120);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>
