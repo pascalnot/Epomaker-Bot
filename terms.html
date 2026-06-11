@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Epomaker Bot</title>
+    <style>
+        /* Same styles as privacy.html */
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #000000;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0a0a0a;
+                --text: #f0f0f0;
+                --accent: #ffffff;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav { background: rgba(10,10,10,0.95); border-bottom-color: #333; }
+        }
+
+        .nav-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        section {
+            padding: 120px 2rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .last-updated {
+            text-align: center;
+            opacity: 0.6;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.65rem;
+            margin: 3rem 0 1.25rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .content ul {
+            padding-left: 1.8rem;
+            margin: 1.2rem 0;
+        }
+
+        .content li { margin-bottom: 0.8rem; }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid #eee;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Epomaker Bot</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: June 2026</p>
+        
+        <div class="content">
+            <h2>1. Usage</h2>
+            <p>Epomaker Bot is intended for internal use within a single Discord server.</p>
+            <p>By using the bot, you agree to these terms.</p>
+
+            <h2>2. Description</h2>
+            <p>The bot provides automated responses to support-related questions and basic utility commands.</p>
+
+            <h2>3. Acceptable Use</h2>
+            <p>Users may not:</p>
+            <ul>
+                <li>abuse or spam the bot</li>
+                <li>attempt to break or interfere with functionality</li>
+                <li>use the bot for illegal activity</li>
+            </ul>
+
+            <h2>4. Availability</h2>
+            <p>The bot is provided as-is. No guarantees are made regarding uptime or availability.</p>
+
+            <h2>5. Liability</h2>
+            <p>The bot is used at your own risk. The developers are not responsible for any issues resulting from its use.</p>
+
+            <h2>6. Changes</h2>
+            <p>These terms may be updated at any time if needed.</p>
+
+            <h2>7. Contact</h2>
+            <p>Contact the server administrators for support or questions.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Epomaker Bot • Internal Discord Server Tool
+    </footer>
+</body>
+</html>
