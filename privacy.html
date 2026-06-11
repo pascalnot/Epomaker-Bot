@@ -5,53 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Epomaker Bot</title>
     <style>
-        /* Reuse the same styles from index.html */
         :root {
-            --bg: #ffffff;
-            --text: #1a1a1a;
-            --accent: #000000;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0a0a0a;
-                --text: #f0f0f0;
-                --accent: #ffffff;
-            }
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
+            --text: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
-            background: rgba(255,255,255,0.95);
+            background: rgba(15,15,15,0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
             z-index: 1000;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            nav { background: rgba(10,10,10,0.95); border-bottom-color: #333; }
         }
 
         .nav-content {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; }
+        .logo { font-size: 1.7rem; font-weight: 700; }
 
         .nav-links a {
             margin-left: 2rem;
@@ -60,40 +51,53 @@
             font-weight: 500;
         }
 
-        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover { color: #aaa; }
 
-        section {
-            padding: 120px 2rem 6rem;
+        .header {
+            padding: 160px 2rem 80px;
+            text-align: center;
             max-width: 900px;
             margin: 0 auto;
         }
 
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
         }
 
         .last-updated {
-            text-align: center;
             opacity: 0.6;
-            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
-            font-size: 1.65rem;
-            margin: 3rem 0 1.25rem;
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.2rem;
             position: relative;
         }
 
         h2::after {
             content: '';
             position: absolute;
-            bottom: -6px;
+            bottom: -8px;
             left: 0;
-            width: 50px;
+            width: 60px;
             height: 3px;
-            background: var(--accent);
+            background: #ffffff;
         }
 
         .content ul {
@@ -101,14 +105,16 @@
             margin: 1.2rem 0;
         }
 
-        .content li { margin-bottom: 0.8rem; }
+        .content li {
+            margin-bottom: 0.9rem;
+        }
 
         footer {
             text-align: center;
             padding: 4rem 2rem;
-            border-top: 1px solid #eee;
-            opacity: 0.7;
+            opacity: 0.6;
             font-size: 0.95rem;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -124,57 +130,31 @@
         </div>
     </nav>
 
-    <section>
+    <div class="header">
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last updated: June 2026</p>
-        
-        <div class="content">
-            <h2>1. Overview</h2>
-            <p>Epomaker Bot is used only within a single Discord server to provide automated support responses and basic utility functions.</p>
+    </div>
 
-            <h2>2. Data Processed</h2>
-            <p>The bot may process:</p>
-            <ul>
-                <li>Discord user IDs</li>
-                <li>Discord server ID</li>
-                <li>Discord channel ID</li>
-                <li>Command messages (e.g. !help, !support)</li>
-            </ul>
-            <p>No additional personal data is collected.</p>
-
-            <h2>3. Purpose</h2>
-            <p>Data is processed only to:</p>
-            <ul>
-                <li>Respond to commands</li>
-                <li>Provide support information</li>
-                <li>Maintain bot functionality</li>
-                <li>Prevent abuse or misuse</li>
-            </ul>
-
-            <h2>4. Message Content</h2>
-            <p>Message content is only read when required to detect and respond to bot commands.</p>
-            <p>It is not stored or used for any other purpose.</p>
-
-            <h2>5. Data Storage</h2>
-            <p>The bot does not permanently store user messages or personal data.</p>
-
-            <h2>6. Data Sharing</h2>
-            <p>No data is shared, sold, or transferred to third parties.</p>
-
-            <h2>7. Data Access and Deletion</h2>
-            <p>As the bot is used in a single server environment, any data concerns can be addressed directly through the server administrators.</p>
-
-            <h2>8. Third Parties</h2>
-            <p>The bot operates through Discord and is subject to Discord’s Privacy Policy:</p>
-            <p><a href="https://discord.com/privacy" target="_blank" style="color: var(--accent);">https://discord.com/privacy</a></p>
-
-            <h2>9. Contact</h2>
-            <p>Contact server moderators for any questions regarding data handling.</p>
-        </div>
+    <section class="content">
+        <h2>1. Overview</h2>
+        <p>Epomaker Bot is used only within a single Discord server to provide automated support responses and basic utility functions.</p>
     </section>
 
-    <footer>
-        © 2026 Epomaker Bot • Internal Discord Server Tool
-    </footer>
-</body>
-</html>
+    <section class="content">
+        <h2>2. Data Processed</h2>
+        <p>The bot may process:</p>
+        <ul>
+            <li>Discord user IDs</li>
+            <li>Discord server ID</li>
+            <li>Discord channel ID</li>
+            <li>Command messages (e.g. !help, !support)</li>
+        </ul>
+        <p>No additional personal data is collected.</p>
+    </section>
+
+    <section class="content">
+        <h2>3. Purpose</h2>
+        <p>Data is processed only to:</p>
+        <ul>
+            <li>Respond to commands</li>
+            <
