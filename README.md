@@ -1,37 +1,64 @@
-# Epomaker Bot
+<div align="center">
+  <h1>Epomaker Bot</h1>
+  
+  <p>
+    <strong>A lightweight Discord bot for automated support in the Epomaker community.</strong><br>
+    Built to reduce repetitive questions and help moderators focus on what matters most.
+  </p>
 
-Epomaker Bot is a Discord bot used internally in a single server to provide automated support and reduce repetitive questions for moderators.
+  <img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white" alt="Discord">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Status-Internal%20Use-blue" alt="Internal Use">
 
-The bot is not publicly distributed and is only intended for use within one Discord server.
+  <br><br>
+  
+  ![Epomaker Banner](https://via.placeholder.com/800x200/5865F2/FFFFFF?text=EPOMAKER+BOT) <!-- Replace with your actual banner -->
+</div>
 
----
+## ✨ About
 
-## Purpose
+**Epomaker Bot** is a custom Discord bot used internally within the official Epomaker Discord server. It provides instant, consistent answers to frequently asked questions, significantly reducing the workload on the moderation team.
 
-The bot helps users by providing quick answers to common support questions using simple commands such as:
-
-!via
-!support
-!collab
-!language
-!spreadsheet
-!help
-
-It is designed to reduce manual workload for the moderation team.
-
----
-
-## Legal
-
-- Privacy Policy: PRIVACY_POLICY.md
-- Terms of Service: TERMS_OF_SERVICE.md
+The bot is **not publicly distributed** and is intended exclusively for use in one Discord server.
 
 ---
 
-## Contact
+## 🎯 Purpose
 
-For support or questions, contact the server moderation team.
+The bot helps users get quick answers to common support questions using simple prefix commands.
 
-## Discord Server
+### Available Commands
 
-[Join our Discord](https://discord.com/invite/epomaker)
+| Command         | Description                              | Usage Example      |
+|-----------------|------------------------------------------|--------------------|
+| `!via`          | Information about VIA / QMK             | `!via`             |
+| `!support`      | How to get technical support             | `!support`         |
+| `!collab`       | Collaboration / partnership info         | `!collab`          |
+| `!language`     | Language & translation support           | `!language`        |
+| `!spreadsheet`  | Link to product spreadsheet / database   | `!spreadsheet`     |
+| `!help`         | Show all available commands              | `!help`            |
+
+> More commands can be added as needed.
+
+---
+
+## 📜 Legal
+
+- **Privacy Policy**: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+- **Terms of Service**: [TERMS_OF_SERVICE.md](TERMS_OF_SERVICE.md)
+
+---
+
+## 📞 Contact
+
+For support, questions, or suggestions regarding the bot, please contact the **Epomaker Discord moderation team**.
+
+## 🌐 Discord Server
+
+[Join the Epomaker Discord](https://discord.gg/epomaker) <!-- Replace with actual invite link -->
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ for the Epomaker community</sub>
+</div>
