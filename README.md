@@ -31,14 +31,14 @@ The bot helps users get quick answers to common support questions using simple p
 
 ### Available Commands
 
-| Command         | Description                              | Usage Example      |
-|-----------------|------------------------------------------|--------------------|
-| `!via`          | Information about VIA / QMK             | `!via`             |
-| `!support`      | How to get technical support             | `!support`         |
-| `!collab`       | Collaboration / partnership info         | `!collab`          |
-| `!language`     | Language & translation support           | `!language`        |
-| `!spreadsheet`  | Link to product spreadsheet / database   | `!spreadsheet`     |
-| `!help`         | Show all available commands              | `!help`            |
+| Command         | Description                              |
+|-----------------|------------------------------------------|
+| `!via`          | Information about VIA / QMK             |
+| `!support`      | How to get technical support             |
+| `!collab`       | Collaboration / partnership info         |
+| `!language`     | Language & translation support           |
+| `!spreadsheet`  | Link to product spreadsheet / database   |
+| `!help`         | Show all available commands              |
 
 > More commands can be added as needed.
 
@@ -53,7 +53,7 @@ The bot helps users get quick answers to common support questions using simple p
 
 ## 📞 Contact
 
-For support, questions, or suggestions regarding the bot, please contact the **Epomaker Discord moderation team**.
+For support, questions, or suggestions regarding the bot, please contact **pascal.n** on discord.
 
 ---
 
