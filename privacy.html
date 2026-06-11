@@ -7,15 +7,10 @@
     <style>
         :root {
             --bg: #0f0f0f;
-            --card: #1a1a1a;
             --text: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -34,7 +29,7 @@
         }
 
         .nav-content {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1.2rem 2rem;
             display: flex;
@@ -53,40 +48,34 @@
 
         .nav-links a:hover { color: #aaa; }
 
-        .header {
-            padding: 160px 2rem 80px;
-            text-align: center;
+        .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 180px 2rem 100px;
         }
 
         h1 {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
+            text-align: center;
             margin-bottom: 1rem;
         }
 
         .last-updated {
+            text-align: center;
             opacity: 0.6;
-            font-size: 1.1rem;
+            margin-bottom: 4rem;
         }
 
-        section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .content {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 3rem 3rem;
+            border: 1px solid #333;
         }
 
         h2 {
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1.2rem;
+            font-size: 1.85rem;
+            margin: 2.8rem 0 1.4rem;
             position: relative;
         }
 
@@ -95,18 +84,42 @@
             position: absolute;
             bottom: -8px;
             left: 0;
-            width: 60px;
+            width: 70px;
             height: 3px;
             background: #ffffff;
         }
 
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.4rem;
+        }
+
         .content ul {
-            padding-left: 1.8rem;
-            margin: 1.2rem 0;
+            padding-left: 2rem;
+            margin: 1.4rem 0;
         }
 
         .content li {
             margin-bottom: 0.9rem;
+        }
+
+        .discord-btn {
+            display: block;
+            width: fit-content;
+            margin: 4rem auto 2rem;
+            padding: 16px 42px;
+            background: #5865F2;
+            color: white;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .discord-btn:hover {
+            transform: scale(1.05);
+            background: #4752c4;
         }
 
         footer {
@@ -130,31 +143,59 @@
         </div>
     </nav>
 
-    <div class="header">
+    <div class="container">
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last updated: June 2026</p>
+
+        <div class="content">
+            <h2>1. Overview</h2>
+            <p>Epomaker Bot is used only within a single Discord server to provide automated support responses and basic utility functions.</p>
+
+            <h2>2. Data Processed</h2>
+            <p>The bot may process:</p>
+            <ul>
+                <li>Discord user IDs</li>
+                <li>Discord server ID</li>
+                <li>Discord channel ID</li>
+                <li>Command messages (e.g. !help, !support)</li>
+            </ul>
+            <p>No additional personal data is collected.</p>
+
+            <h2>3. Purpose</h2>
+            <p>Data is processed only to:</p>
+            <ul>
+                <li>Respond to commands</li>
+                <li>Provide support information</li>
+                <li>Maintain bot functionality</li>
+                <li>Prevent abuse or misuse</li>
+            </ul>
+
+            <h2>4. Message Content</h2>
+            <p>Message content is only read when required to detect and respond to bot commands.</p>
+            <p>It is not stored or used for any other purpose.</p>
+
+            <h2>5. Data Storage</h2>
+            <p>The bot does not permanently store user messages or personal data.</p>
+
+            <h2>6. Data Sharing</h2>
+            <p>No data is shared, sold, or transferred to third parties.</p>
+
+            <h2>7. Data Access and Deletion</h2>
+            <p>As the bot is used in a single server environment, any data concerns can be addressed directly through the server administrators.</p>
+
+            <h2>8. Third Parties</h2>
+            <p>The bot operates through Discord and is subject to Discord’s Privacy Policy:</p>
+            <p><a href="https://discord.com/privacy" target="_blank" style="color:#aaa;">https://discord.com/privacy</a></p>
+
+            <h2>9. Contact</h2>
+            <p>Contact server moderators for any questions regarding data handling.</p>
+        </div>
     </div>
 
-    <section class="content">
-        <h2>1. Overview</h2>
-        <p>Epomaker Bot is used only within a single Discord server to provide automated support responses and basic utility functions.</p>
-    </section>
+    <a href="https://discord.gg/epomaker" target="_blank" class="discord-btn">Join Discord Server</a>
 
-    <section class="content">
-        <h2>2. Data Processed</h2>
-        <p>The bot may process:</p>
-        <ul>
-            <li>Discord user IDs</li>
-            <li>Discord server ID</li>
-            <li>Discord channel ID</li>
-            <li>Command messages (e.g. !help, !support)</li>
-        </ul>
-        <p>No additional personal data is collected.</p>
-    </section>
-
-    <section class="content">
-        <h2>3. Purpose</h2>
-        <p>Data is processed only to:</p>
-        <ul>
-            <li>Respond to commands</li>
-            <
+    <footer>
+        © 2026 Epomaker Bot • Internal Discord Server Tool
+    </footer>
+</body>
+</html>
