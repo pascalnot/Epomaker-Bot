@@ -31,3 +31,9 @@ It is designed to reduce manual workload for the moderation team.
 ## Contact
 
 For support or questions, contact the server moderation team.
+
+## Discord Server
+
+[Join our Discord](https://discord.com/invite/epomaker)
+
+![Discord Server](https://discord.com/api/guilds/726610136084250764/widget.png?style=banner2)
