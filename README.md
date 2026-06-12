@@ -17,7 +17,7 @@
   ![Epomaker Banner](https://i.imgur.com/3dZ6ItI.png) <!-- Replace with your actual banner -->
 </div>
 
-## ✨ About
+## About
 
 **Epomaker Bot** is a custom Discord bot used internally within the official Epomaker Discord server. It provides instant, consistent answers to frequently asked questions, significantly reducing the workload on the moderation team.
 
@@ -25,7 +25,7 @@ The bot is **not publicly distributed** and is intended exclusively for use in o
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 The bot helps users get quick answers to common support questions using simple prefix commands.
 
@@ -33,27 +33,27 @@ The bot helps users get quick answers to common support questions using simple p
 
 | Command         | Description                              |
 |-----------------|------------------------------------------|
-| `!via`          | Information about VIA / QMK             |
+| `!via`          | How to set up VIA                        |
 | `!support`      | How to get technical support             |
 | `!collab`       | Collaboration / partnership info         |
-| `!language`     | Language & translation support           |
-| `!spreadsheet`  | Link to product spreadsheet / database   |
+| `!language`     | Guide to changing keyboard language      |
+| `!spreadsheet`  | Link to product spreadsheet              |
 | `!help`         | Show all available commands              |
 
 > More commands can be added as needed.
 
 ---
 
-## 📜 Legal
+## Legal
 
 - [Privacy Policy](https://pascalnot.github.io/Epomaker-Bot/privacy.html)
 - [Terms of Service](https://pascalnot.github.io/Epomaker-Bot/terms.html)
 
 ---
 
-## 📞 Contact
+## Contact
 
-For support, questions, or suggestions regarding the bot, please contact **pascal.n** on discord.
+For support, questions, or suggestions regarding the bot, please contact **@pascal.n** on discord.
 
 ---
 
