@@ -27,18 +27,18 @@ The bot is **not publicly distributed** and is intended exclusively for use in o
 
 ## Purpose
 
-The bot helps users get quick answers to common support questions using simple prefix commands.
+The bot helps users get quick answers to common support questions using simple commands.
 
 ### Available Commands
 
 | Command         | Description                              |
 |-----------------|------------------------------------------|
-| `!via`          | How to set up VIA                        |
-| `!support`      | How to get technical support             |
-| `!collab`       | Collaboration / partnership info         |
-| `!language`     | Guide to changing keyboard language      |
-| `!spreadsheet`  | Link to product spreadsheet              |
-| `!help`         | Show all available commands              |
+| `/via`          | How to set up VIA                        |
+| `/support`      | How to get technical support             |
+| `/collab`       | Collaboration / partnership info         |
+| `/language`     | Guide to changing keyboard language      |
+| `/spreadsheet`  | Link to product spreadsheet              |
+| `/help`         | Show all available commands              |
 
 > More commands can be added as needed.
 
