@@ -2,10 +2,8 @@ from ezcord import discord
 from ezcord.internal.dc import commands
 
 def setup(bot):
-    @bot.command()
-    async def via(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="via", description="Show instructions for setting up VIA")
+    async def via(interaction: discord.Interaction):
         response = (
             "Here's how to set up VIA:\n"
             "[Find the .json here](<https://epomaker.com/blogs/via-json>)\n"
@@ -14,12 +12,10 @@ def setup(bot):
             " \n"
             "Or follow this guide: https://discord.com/channels/726610136084250764/1390653548475318367"
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
 
-    @bot.command()
-    async def support(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="support", description="Show support contact information")
+    async def support(interaction: discord.Interaction):
         response = (
             "If customer support is needed please Email:\n"
             "**support@epomaker.com**\n"
@@ -28,12 +24,10 @@ def setup(bot):
             " \n"
             "We ask that you refrain from pinging Epomaker, Epomaker Staff, and Moderators as they will respond to your inquiry as soon as they see it."
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
 
-    @bot.command()
-    async def collab(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="collab", description="Show collaboration inquiry information")
+    async def collab(interaction: discord.Interaction):
         response = (
             "# For Collaboration Inquiries:\n\n"
             "- **YouTube, TikTok, Facebook, PR**: Please contact the Marketing team via email.: marketing@epomaker.com\n\n"
@@ -42,39 +36,33 @@ def setup(bot):
             "- **For any collaborations related to exhibitions, events, or sponsorships**: Please contact the Marketing team via email. (marketing@epomaker.com)\n\n"
             "- **To apply as a reviewer in our Discord server**: Please check out https://discord.com/channels/726610136084250764/1309443436742443048  https://discord.com/channels/726610136084250764/1392065267055460403 and make sure to pay attention to the pinned messages."
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
 
-    @bot.command()
-    async def language(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="language", description="Show keyboard language change instructions")
+    async def language(interaction: discord.Interaction):
         response = (
             "To change the language of your keyboard, please follow these steps:\n"
             " \n"
             "https://cdn.discordapp.com/attachments/915825857635975198/1427789606962855976/1231.mp4"
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
 
-    @bot.command(aliases=['list','ref'])
-    async def spreadsheet(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="spreadsheet", description="Show JoMama's spreadsheet for keyboards and switches")
+    async def spreadsheet(interaction: discord.Interaction):
         response = (
             "Here is JoMama's [spreadsheet for Keyboards and Switches](https://docs.google.com/spreadsheets/d/1Otv49VQ1uQ3dLBgFrd623c7ceAWgCqu6s20mSKxfZUg/edit?pli=1&gid=0#gid=0)"
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
 
-    @bot.command()
-    async def help(ctx):
-        if isinstance(ctx.channel, discord.DMChannel):
-            return
+    @bot.tree.command(name="help", description="Show available slash commands")
+    async def help_command(interaction: discord.Interaction):
         response = (
             "Here are the available commands:\n"
-            "- `!via`: Instructions for setting up VIA\n"
-            "- `!support`: How to contact support\n"
-            "- `!collab`: Information for collaboration inquiries\n"
-            "- `!language`: Guide to changing keyboard language\n"
-            "- `!spreadsheet` (or `!list`, `!ref`): Link to JoMama's spreadsheet for keyboards and switches\n"
-            "- `!help`: Display this help message"
+            "- `/via`: Instructions for setting up VIA\n"
+            "- `/support`: How to contact support\n"
+            "- `/collab`: Information for collaboration inquiries\n"
+            "- `/language`: Guide to changing keyboard language\n"
+            "- `/spreadsheet`: Link to JoMama's spreadsheet for keyboards and switches\n"
+            "- `/help`: Display this help message"
         )
-        await ctx.send(response)
+        await interaction.response.send_message(response)
