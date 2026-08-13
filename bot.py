@@ -6,9 +6,9 @@ from ezcord.internal.dc import commands
 from commands import setup as setup_commands
  
 intents = discord.Intents.default()
-intents.members = True
-intents.message_content = True
-intents.reactions = True
+intents.members = False
+intents.message_content = False
+intents.reactions = False
  
 bot = commands.Bot(
     command_prefix="/",  # unused for slash commands, kept for compatibility
